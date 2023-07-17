@@ -6,7 +6,8 @@ import Signin from './Pages/Signin.jsx';
 import SignUp from './Pages/SignUp.jsx';
 import ForgotPassword from './Pages/ForgotPassword.jsx';
 import Offers from './Pages/Offers.jsx';
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <>
@@ -21,6 +22,18 @@ function App() {
           <Route path='/offers' element={<Offers/>} />
         </Routes>
       </Router>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </>
   );
 }
